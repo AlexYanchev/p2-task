@@ -1,0 +1,13 @@
+{
+  "name": "p2-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pnpm --parallel --stream -r run start",
+    "build": "pnpm --parallel --stream -r run build"
+  },
+  "author": "AY",
+  "license": "ISC"
+}
