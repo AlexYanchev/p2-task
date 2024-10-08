@@ -64,7 +64,9 @@ const deleteTask = async (req: Request, res: Response, next: NextFunction) => {
             next('Task cannot be deleted.');
         } else {
             res.status(200).json({
-                message: `Task ${deletedTask?._id} deleted.`,
+                success: true,
+                idTask: deletedTask._id,
+                message: `Task ${deletedTask._id} deleted.`,
             });
         }
     } catch (e) {
