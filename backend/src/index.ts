@@ -7,7 +7,7 @@ import { errorHandler } from './middlewares/errorMiddleware.js';
 import connectMongoDB from './connect/database.js';
 import cors from 'cors';
 
-dotenv.config({ path: path.resolve(process.cwd(), '../.env') });
+dotenv.config({ path: path.resolve(process.cwd(), '../../.env') });
 
 connectMongoDB(process.env.MONGO_URI || '');
 
