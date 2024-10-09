@@ -4,8 +4,10 @@ WORKDIR /app
 
 COPY . /app
 
-RUN npm install
+RUN npm install -g pnpm
+
+RUN pnpm install
 
 EXPOSE 8000
 
-CMD [ "npm", "start" ]
+CMD [ "pnpm", "run","start" ]
