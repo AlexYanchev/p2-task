@@ -6,7 +6,7 @@ COPY . /app
 
 RUN npm install -g pnpm
 
-RUN pnpm install
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
 
 EXPOSE 8000
 
