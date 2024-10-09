@@ -1,23 +1,20 @@
-import express, { Request, Response } from 'express'
+import express, { Request, Response } from 'express';
+import {
+    getTasks,
+    createTask,
+    updateTask,
+    deleteTask,
+} from '../controllers/taskController.js';
+import protect from '../middlewares/authMiddleware.js';
 
-const taskRouter = express.Router()
+const taskRouter = express.Router();
 
-taskRouter.get('/', (req: Request, res: Response) => {
-    res.status(200).json({ message: 'Get all tasks.' })
-})
+taskRouter.get('/', protect, getTasks);
 
-taskRouter.post('/', (req: Request, res: Response) => {
-    res.status(200).json({ message: 'Task created.' })
-})
+taskRouter.post('/', protect, createTask);
 
-taskRouter.put('/:id', (req: Request, res: Response) => {
-    const id = req.params.id
-    res.status(200).json({ message: `Task ${id} updated.` })
-})
+taskRouter.put('/:id', protect, updateTask);
 
-taskRouter.delete('/:id', (req: Request, res: Response) => {
-    const id = req.params.id
-    res.status(200).json({ message: `Task ${id} deleted.` })
-})
+taskRouter.delete('/:id', protect, deleteTask);
 
-export default taskRouter
+export default taskRouter;
