@@ -16,7 +16,7 @@ const app = express();
 
 app.use(
     cors({
-        origin: ['http://localhost:3000'],
+        origin: ['https://tangerine-madeleine-cb4275.netlify.app'],
     })
 );
 app.use(express.json());
