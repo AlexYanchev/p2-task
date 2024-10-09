@@ -15,11 +15,11 @@
         "cors": "^2.8.5",
         "dotenv": "^16.4.5",
         "express": "^4.21.0",
-        "frontend": "workspace:*",
         "jsonwebtoken": "^9.0.2",
         "mongoose": "^8.7.0"
     },
     "devDependencies": {
+        "frontend": "workspace:*",
         "@babel/core": "^7.25.7",
         "@babel/preset-env": "^7.25.7",
         "@babel/preset-typescript": "^7.25.7",
