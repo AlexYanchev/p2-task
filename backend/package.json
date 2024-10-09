@@ -6,7 +6,9 @@
     "type": "module",
     "scripts": {
         "test": "jest",
-        "start": "nodemon --watch ./src --exec \"tsc --project ./tsconfig.build.json && cd ./build/src && node index.js\" --verbose -e js,ts"
+        "dev": "nodemon --watch ./src --exec \"tsc --project ./tsconfig.build.json && cd ./build/src && node index.js\" --verbose -e js,ts",
+        "build": "tsc --project ./tsconfig.build.json",
+        "start": "cd ./build/src && node index.js"
     },
     "author": "AY",
     "license": "ISC",
