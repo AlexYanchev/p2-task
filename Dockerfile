@@ -6,7 +6,7 @@ WORKDIR /app/backend
 
 RUN npm install -g pnpm
 
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod 
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install 
 
 RUN pnpm run build
 
